@@ -9,6 +9,6 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'views') + '/hello.html');
+    app.use(express.static(__dirname + '/views'));
 });
 app.listen(port, () => console.log(`Start listening on port ${port}!`));
