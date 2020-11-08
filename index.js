@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 app.use(express.urlencoded());
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get("/start", (req, res) => {
     res.write('Hello!');
     res.end();
 });
