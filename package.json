@@ -1,7 +1,9 @@
 {
   "name": "gem-puzzle-server",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  },
   "engines": {
     "node": "0.10.x",
     "npm": "1.3.x"
