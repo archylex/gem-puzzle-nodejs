@@ -1,12 +1,9 @@
-var express = require("express");
-var app = express();
-app.use(express.logger());
+const express = require('express');
+const app = express();
+const path = require('path');
+const port = process.env.PORT || 3000;
 
-app.get('/', function(request, response) {
-  response.send('Hello World!');
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname,'views') + '/hello.html');
 });
-
-var port = process.env.PORT || 5000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+app.listen(port, () => console.log(`Start listening on port ${port}!`));
